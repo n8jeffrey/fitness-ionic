@@ -1,0 +1,7 @@
+{
+  "name": "healthcare",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
