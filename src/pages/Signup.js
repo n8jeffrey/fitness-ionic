@@ -1,5 +1,5 @@
 import React from 'react'
-import { IonCol, IonContent, IonItem, IonLabel, IonPage, IonInput } from '@ionic/react'
+import { IonRow, IonCol, IonContent, IonItem, IonLabel, IonPage, IonInput, IonButton } from '@ionic/react'
 import NavHeader from '../components/header/NavHeader'
 
 const Signup = () => {
@@ -23,9 +23,13 @@ const Signup = () => {
                 </IonItem>
 
                 <IonRow>
-                    <IonCol></IonCol>
+                    <IonCol>
+                        <IonButton type='submit' color='primary' expand='block'>Sign Up</IonButton>                                                
+                    </IonCol>
                 </IonRow>
             </IonContent>
         </IonPage>
     )
 }
+
+export default Signup
