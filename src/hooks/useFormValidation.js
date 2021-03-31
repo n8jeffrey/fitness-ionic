@@ -20,16 +20,25 @@ function useFormValidation(initialState, validate, action) {
         }
 
         //es-ling-disable-next-line
-    } (errors));
+    }, (errors));
 
     function handleChange(event) {
         setValues(previousValues => ({
             ...previousValues,
-            [event.target.name]: event.target.value
-        }))
+            [event.target.name]: event.target.value,
+        }));
+    }
+    
+        function handleSubmit() {
+            const validationErrors = validate(values);
+            setErrors(validationErrors);
+            setSubmitting(true);
+        }
+
+        return {
+            handleSubmit, handleChange, values, setValues, isSubmitting
+        }
+
     }
 
-    function handleSubmit() {
-        const validationErrors = validate(values):
-    }
-}
+    export default useFormValidation
