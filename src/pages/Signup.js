@@ -18,7 +18,7 @@ const Signup = (props) => {
         handleSubmit,
         handleChange,
         values,
-        isSubmitting
+        isSubmitting,
     } = useFormValidation(INITIAL_STATE, validateSignup, authenticateUser)
 
     const [busy, setBusy] = React.useState(false);
