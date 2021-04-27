@@ -1,5 +1,5 @@
 import React from 'react'
-import { IonRow, IonCol, IonContent, IonItem, IonLabel, IonPage, IonInput, IonButton, IonRouterLink } from '@ionic/react'
+import { IonRow, IonCol, IonContent, IonItem, IonLabel, IonPage, IonInput, IonButton, IonRouterLink, IonLoading } from '@ionic/react'
 import NavHeader from '../components/header/NavHeader'
 import validateLogin from '../Auth/validateLogin';
 import firebase from '../firebase'
@@ -39,6 +39,7 @@ const Login = (props) => {
     return (
         <IonPage>
             <NavHeader title='Login' />
+            <IonLoading message={"Please wait..."} isOpen={busy} />
             <IonContent>
 
                 <IonItem lines='full'>
